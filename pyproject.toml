@@ -1,0 +1,17 @@
+[project]
+name = "flow-capture"
+version = "0.1.0"
+requires-python = "==3.13.*"
+description = "Setting up via https://www.youtube.com/watch?v=mFyE9xgeKcA"
+readme = "README.md"
+authors = [
+    { name = "codesmith55", email = "codesmith55@gmail.com" }
+]
+dependencies = ["fastapi", "granian", "stamina"]
+
+[dependency-groups]
+dev = ["fastapi[standard]", "pytest"]
+
+[build-system]
+requires = ["uv"]
+build-backend = "uv"
