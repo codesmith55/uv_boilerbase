@@ -9,6 +9,7 @@ highlighted_regions = []
 
 # Function to draw a yellow rectangle on the screen
 def draw_highlight(x, y, w, h):
+    print(f"draw_highlight region: ({x}, {y}, {w}, {h})")
     screenshot = pyautogui.screenshot()
     frame = cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
     cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 255), 2)
@@ -19,6 +20,7 @@ def draw_highlight(x, y, w, h):
 def capture_highlighted_region(x, y, w, h):
     highlighted_regions.append((x, y, w, h))
     print(f"Highlighted region: ({x}, {y}, {w}, {h})")
+    draw_highlight(x,y,w,h)
 
 # Function to print all highlighted regions
 def print_highlighted_regions():
